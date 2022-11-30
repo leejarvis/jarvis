@@ -3,3 +3,6 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
+.text-base {
+  line-height: 1.75rem;
+}
