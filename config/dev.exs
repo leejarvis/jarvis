@@ -47,6 +47,7 @@ config :jarvis, JarvisWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
+      ~r"priv/posts/.*.md$",
       ~r"lib/jarvis_web/(live|views)/.*(ex)$",
       ~r"lib/jarvis_web/templates/.*(eex)$"
     ]

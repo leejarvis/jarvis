@@ -19,6 +19,9 @@ defmodule JarvisWeb.Router do
 
     get "/", PageController, :home
     get "/about", PageController, :about
+
+    get "/posts", PostController, :index
+    get "/posts/:year/:id", PostController, :show
   end
 
   # Other scopes may use custom stacks.
