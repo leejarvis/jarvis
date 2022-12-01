@@ -1,5 +1,6 @@
 %{
-  title: "Weeknotes 6: whatever 'in love' means.",
+  title: "Whatever 'in love' means.",
+  summary: "Weeknotes 6",
 }
 ---
 

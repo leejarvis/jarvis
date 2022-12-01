@@ -1,5 +1,6 @@
 %{
-  title: "Weeknotes 4: the world wide web is free",
+  title: "The world wide web is free",
+  summary: "Weeknotes 4",
 }
 ---
 

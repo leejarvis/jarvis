@@ -1,5 +1,6 @@
 %{
-  title: "Weeknotes 2: maple poutine",
+  title: "Maple poutine",
+  summary: "Weeknotes 2"
 }
 ---
 

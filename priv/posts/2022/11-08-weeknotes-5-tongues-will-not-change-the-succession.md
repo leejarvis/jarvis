@@ -1,5 +1,6 @@
 %{
-  title: "Weeknotes 5: tongues will not change the succession",
+  title: "Tongues will not change the succession",
+  summary: "Weeknotes 5",
 }
 ---
 

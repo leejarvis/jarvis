@@ -1,5 +1,6 @@
 %{
-  title: "Weeknotes 0: initialize",
+  title: "Weeknotes: initialize",
+  summary: "Weeknotes 0",
 }
 ---
 

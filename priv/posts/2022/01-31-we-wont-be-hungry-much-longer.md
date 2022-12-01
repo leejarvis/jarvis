@@ -1,5 +1,6 @@
 %{
-  title: "Weeknotes 3: we won't be hungry much longer",
+  title: "We won't be hungry much longer",
+  summary: "Weeknotes 3"
 }
 ---
 

@@ -1,5 +1,6 @@
 %{
-  title: "Weeknotes 1: oops I did it again",
+  title: "Oops I did it again",
+  summary: "Weeknotes 1",
 }
 ---
 
