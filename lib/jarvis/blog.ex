@@ -2,8 +2,7 @@ defmodule Jarvis.Blog do
   use NimblePublisher,
     build: Jarvis.Blog.Post,
     from: Application.app_dir(:jarvis, "priv/posts/**/*.md"),
-    as: :posts,
-    highlighters: [:makeup_elixir, :makeup_erlang]
+    as: :posts
 
   defmodule NotFoundError, do: defexception [:message, plug_status: 404]
 
