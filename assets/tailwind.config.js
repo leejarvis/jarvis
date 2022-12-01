@@ -118,7 +118,7 @@ module.exports = {
           h3: {
             fontSize: theme('fontSize.base')[0],
             lineHeight: theme('lineHeight.7'),
-            marginTop: theme('spacing.16'),
+            marginTop: theme('spacing.10'),
             marginBottom: theme('spacing.4'),
           },
           ':is(h2, h3) + *': {
@@ -193,10 +193,12 @@ module.exports = {
           },
           'ul, ol': {
             paddingLeft: theme('spacing.6'),
+            marginTop: theme('spacing.1'),
+            marginBottom: theme('spacing.1'),
           },
           li: {
-            marginTop: theme('spacing.2'),
-            marginBottom: theme('spacing.2'),
+            marginTop: theme('spacing.1'),
+            marginBottom: theme('spacing.1'),
             paddingLeft: theme('spacing[3.5]'),
           },
           'li::marker': {
@@ -229,6 +231,8 @@ module.exports = {
             overflowX: 'auto',
             border: '1px solid',
             borderColor: 'var(--tw-prose-pre-border)',
+            marginTop: theme('spacing.2'),
+            marginBottom: theme('spacing.2'),
           },
           'pre code': {
             display: 'inline',
