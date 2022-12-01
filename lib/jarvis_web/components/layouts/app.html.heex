@@ -51,7 +51,7 @@
 </header>
 
 <main class="relative z-50 w-full flex-none text-slate-900">
-  <div class="mx-auto max-w-5xl px-20 pb-20 bg-white">
+  <div class="mx-auto max-w-5xl px-10 lg:px-20 pb-20 bg-white">
     <.flash kind={:info} title="Success!" flash={@flash} />
     <.flash kind={:error} title="Error!" flash={@flash} />
     <.flash id="disconnected" kind={:error} title="We can't find the internet" close={false} autoshow={false}
@@ -64,14 +64,14 @@
 </main>
 
 <footer class="relative z-50 w-full flex-none text-slate-700">
-  <div class="mx-auto max-w-5xl px-20 py-8 bg-white border-t border-zinc-100 text-sm">
-    <div class="flex items-center">
+  <div class="mx-auto max-w-5xl px-10 lg:px-20 py-8 bg-white border-t border-zinc-100 text-sm">
+    <div class="lg:flex items-center">
       <div class="flex items-center font-medium mr-auto">
         <a class="transition hover:text-rose-500" href="/about">About</a>
         <a class="ml-8 transition hover:text-rose-500" href="/posts">Posts</a>
         <a class="ml-8 transition hover:text-rose-500" href="/uses">Uses</a>
       </div>
-      <div class="text-slate-500">
+      <div class="text-slate-500 mt-5 lg:m-0">
         &copy; Lee Jarvis
       </div>
     </div>
