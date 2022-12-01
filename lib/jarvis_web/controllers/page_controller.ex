@@ -6,6 +6,10 @@ defmodule JarvisWeb.PageController do
   end
 
   def about(conn, _params) do
-    render(conn, :about)
+    render(conn, :about, page_title: "About")
+  end
+
+  def uses(conn, _params) do
+    render(conn, :uses, page_title: "Uses")
   end
 end

@@ -399,20 +399,16 @@ defmodule JarvisWeb.CoreComponents do
 
   slot :inner_block, required: true
   slot :subtitle
-  slot :actions
 
   def header(assigns) do
     ~H"""
-    <header class={[@actions != [] && "flex items-center justify-between gap-6", @class]}>
-      <div>
-        <h1 class="text-lg font-semibold leading-8 text-zinc-800">
-          <%= render_slot(@inner_block) %>
-        </h1>
-        <p :if={@subtitle != []} class="mt-2 text-sm leading-6 text-zinc-600">
-          <%= render_slot(@subtitle) %>
-        </p>
-      </div>
-      <div class="flex-none"><%= render_slot(@actions) %></div>
+    <header class="max-w-2xl">
+      <h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+        <%= render_slot(@inner_block) %>
+      </h1>
+      <p :if={@subtitle != []} class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+        <%= render_slot(@subtitle) %>
+      </p>
     </header>
     """
   end
