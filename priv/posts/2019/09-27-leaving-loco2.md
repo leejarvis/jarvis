@@ -1,7 +1,6 @@
 %{
   title: "Leaving Loco2",
   summary: "It's time to say farewell 👋 🚂",
-  redirect_from: "/posts/2018/leaving-loco2",
 }
 ---
 
