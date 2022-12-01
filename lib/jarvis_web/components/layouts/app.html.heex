@@ -19,10 +19,30 @@
       </div>-->
 
       <div class="flex items-center">
-        <a class="transition hover:text-rose-500" href="/about">Home</a>
-        <a class="ml-8 transition hover:text-rose-500" href="/about">About</a>
-        <a class="ml-8 transition hover:text-rose-500" href="/posts">Posts</a>
-        <a class="ml-8 transition hover:text-rose-500" href="/uses">Uses</a>
+        <a class="relative transition hover:text-rose-500" href="/">
+          Home
+          <%= if @conn.request_path == "/" do %>
+            <span class="absolute -bottom-2 -inset-x-2 h-px bg-gradient-to-r from-rose-500/0 via-rose-500/40 to-rose-500/0"></span>
+          <% end %>
+        </a>
+        <a class="relative ml-8 transition hover:text-rose-500" href="/about">
+          About
+          <%= if @conn.request_path == "/about" do %>
+            <span class="absolute -bottom-2 -inset-x-2 h-px bg-gradient-to-r from-rose-500/0 via-rose-500/40 to-rose-500/0"></span>
+          <% end %>
+        </a>
+        <a class="relative ml-8 transition hover:text-rose-500" href="/posts">
+          Posts
+          <%= if String.starts_with?(@conn.request_path, "/posts") do %>
+            <span class="absolute -bottom-2 -inset-x-2 h-px bg-gradient-to-r from-rose-500/0 via-rose-500/40 to-rose-500/0"></span>
+          <% end %>
+        </a>
+        <a class="relative ml-8 transition hover:text-rose-500" href="/uses">
+          Uses
+          <%= if @conn.request_path == "/uses" do %>
+            <span class="absolute -bottom-2 -inset-x-2 h-px bg-gradient-to-r from-rose-500/0 via-rose-500/40 to-rose-500/0"></span>
+          <% end %>
+        </a>
       </div>
 
       <div class="ml-auto"></div>
