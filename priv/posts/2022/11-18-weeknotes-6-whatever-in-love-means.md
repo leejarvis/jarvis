@@ -1,6 +1,5 @@
 %{
-  title: "Hello World!",
-  summary: "Foo to the bar"
+  title: "Weeknotes 6: whatever 'in love' means.",
 }
 ---
 
@@ -39,4 +38,3 @@ We started watching the latest season of **The Crown** and I'm ambivalent. It's 
 ---
 
 Did I mention it's really dark? Also, Christmas is in 5 weeks. Gah!
-

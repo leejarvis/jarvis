@@ -1,6 +1,6 @@
 defmodule Jarvis.Blog.Post do
   @enforce_keys [:id, :title, :body, :year, :date]
-  defstruct [:id, :title, :body, :summary, :year, :date, :formatted_date]
+  defstruct [:id, :title, :body, :summary, :year, :date, :formatted_date, :redirect_from]
 
   def build(filename, attrs, body) do
     [year, month_day_id] = filename |> Path.rootname() |> Path.split() |> Enum.take(-2)
