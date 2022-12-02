@@ -406,7 +406,7 @@ defmodule JarvisWeb.CoreComponents do
       <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
         <%= render_slot(@inner_block) %>
       </h1>
-      <p :if={@subtitle != []} class="mt-6 text-base text-zinc-600 ">
+      <p :if={@subtitle != []} class="mt-6 text-base text-zinc-600">
         <%= render_slot(@subtitle) %>
       </p>
     </header>
