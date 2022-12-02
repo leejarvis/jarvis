@@ -20,9 +20,7 @@ horizontal scroll view that shows some of my upcoming events; "Mum's birthday",
 These event "cards" were made up of a name and a custom emoji/background colour.
 To drastically simplify, they looked something like this (but better, I promise):
 
-<div class="centered" markdown="1">
-![](/assets/images/posts/swiftui-scrollview.png)
-</div>
+![](/images/posts/swiftui-scrollview.png)
 
 The ScrollView wasn't especially difficult to build, but asking AutoLayout to
 play nicely across all devices in any orientation wasn't exactly my idea of fun.

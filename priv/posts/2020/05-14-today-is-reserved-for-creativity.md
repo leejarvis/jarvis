@@ -3,4 +3,4 @@
 }
 ---
 
-![](/assets/images/posts/workstation.jpg)
+![](/images/posts/workstation.jpg)

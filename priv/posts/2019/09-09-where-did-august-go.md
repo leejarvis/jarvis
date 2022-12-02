@@ -40,14 +40,6 @@ recently completed):
 * [Why We Sleep by Matthew Walker](https://www.goodreads.com/book/show/34466963-why-we-sleep?from_search=true)
 * [Triptych by Karin Slaughter](https://www.goodreads.com/book/show/21717.Triptych?ac=1&from_search=true)
 
-<div class="centered photo-combo" markdown="1">
-![](/assets/images/posts/books/subtle-art.jpg)
-![](/assets/images/posts/books/sapiens.jpg)
-![](/assets/images/posts/books/paradox.jpg)
-![](/assets/images/posts/books/why-we-sleep.jpg)
-![](/assets/images/posts/books/triptych.jpg)
-</div>
-
 I really wish that I'd forced myself to do this sooner.
 
 ### I got a new camera 📷

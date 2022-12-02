@@ -14,7 +14,7 @@ The new application is [blazingly fast](https://inessential.com/2020/05/18/why_n
 
 The hybrid application supports iOS, iPadOS and macOS. Here's how it looks on my Mac:
 
-[![](/assets/images/posts/NetNewsWire.png)](/assets/images/posts/NetNewsWire.png)
+[![](/images/posts/NetNewsWire.png)](/images/posts/NetNewsWire.png)
 
 There are a couple of missing features you might expect from a modern RSS Reader. It doesn't have any first-party sync support (Feedbin works, but I don't use it). Right now I'm exporting my subscriptions to iCloud and then importing them in on my phone.
 

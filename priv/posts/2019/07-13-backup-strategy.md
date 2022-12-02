@@ -43,9 +43,7 @@ have 4 just for the hell of it:
 1. Third copy on Carbon Copy Cloner
 1. Fourth offsite copy on Backblaze
 
-<div class="centered" markdown="1">
-![](/assets/images/posts/backup-diagram.png)
-</div>
+![](/images/posts/backup-diagram.png)
 
 The Backblaze article above compares backing up your data to diversifying
 your investment portfolio. There's no perfect solution, but lowering your

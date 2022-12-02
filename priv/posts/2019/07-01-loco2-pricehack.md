@@ -54,11 +54,7 @@ Pricehack is the combination of cutting-edge software and intuitive customer exp
 
 ---
 
-![](/assets/images/posts/pricehack-axe.jpg)
-
-<div class="image-caption" markdown="1">
-  Pricehack is a tool that will continue to be sharpened for years.
-</div>
+![](/images/posts/pricehack-axe.jpg)
 
 ---
 

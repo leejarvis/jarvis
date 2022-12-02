@@ -22,7 +22,7 @@ My Sony WH-1000XM3 headphones are holding up to the test of a screaming baby and
 
 A few weeks ago whilst listening to the [Cortex Podcast](https://www.relay.fm/cortex), I learned that Myke or Grey had an additional iPhone home screen for travel purposes and thought that might be a nice idea. Turns out it was! Here's the Home Screen I created:
 
-![](/assets/images/travel-screen.png)
+![](/images/posts/travel-screen.png)
 
 The Flighty widget (which I cleared to take the screenshot) contains information about the flight, including boarding times and gate details. Also whilst I generally detest all things Google, it supports offline maps which Apple Maps does not. I activated this screen a few days before travel and will turn it off when I'm back home.
 

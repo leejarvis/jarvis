@@ -20,9 +20,7 @@ Unlike the Apple Magic Mouse (which requires stabbing in the underbelly with a U
 
 Those of you accustomed to wireless Logitech peripherals will know about the little USB dongle they pack into the box. You know, the third-party wireless receiver that goes straight into the bin after unpacking? They call it a Unifying USB Receiver. It looks like this:
 
-<div class="centered" style="" markdown="1">
-![](/assets/images/posts/usb-unifying-receiver.png)
-</div>
+![](/images/posts/usb-unifying-receiver.png)
 
 ### People use this?
 

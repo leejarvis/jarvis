@@ -19,7 +19,7 @@ allow the application to respond to changes in state.
 
 Our current app looks something like this:
 
-![](/assets/images/posts/swiftui-bindings/first-landscape.png)
+![](/images/posts/swiftui-bindings-first-landscape.png)
 
 The date cards are displayed in a ScrollView much life the gift items in our
 previous app. Here's the complete code:
@@ -123,7 +123,7 @@ thinking a little. Our steps turn into something like this:
 
 This is what we're after:
 
-![](/assets/images/posts/swiftui-bindings/final-landscape.png)
+![](/images/posts/swiftui-bindings-final-landscape.png)
 
 Ideally, our ContentView would be responsible for holding the
 value of the currently selected date, and the child views would
