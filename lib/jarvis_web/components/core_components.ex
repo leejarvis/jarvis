@@ -543,6 +543,21 @@ defmodule JarvisWeb.CoreComponents do
   end
 
   @doc """
+  Renders a nav link at the top of the app layout.
+  """
+  attr :href, :string, required: true
+  attr :active, :boolean, default: false
+
+  def nav_link(assigns) do
+    ~H"""
+    <.link href={@href} class="relative transition hover:text-rose-500">
+      <%= render_slot(@inner_block) %>
+      <span :if={@active} class="absolute -bottom-2 -inset-x-2 h-px bg-gradient-to-r from-rose-500/0 via-rose-500/40 to-rose-500/0"></span>
+    </.link>
+    """
+  end
+
+  @doc """
   Renders a section with sub-items on the /uses page.
   """
   attr :heading, :string, required: true
