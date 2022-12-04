@@ -6,9 +6,9 @@
           <h1 class="mt-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
             <%= @post.title %>
           </h1>
-          <time datetime={@post.date} class="order-first flex items-center text-base text-zinc-400 ">
+          <time datetime={@post.published_at} class="order-first flex items-center text-base text-zinc-400 ">
             <span class="h-4 w-0.5 rounded-full bg-zinc-200 "></span>
-            <span class="ml-3"><%= @post.formatted_date %></span></time>
+            <span class="ml-3"><%= format_date(@post.published_at) %></span></time>
         </header>
         <div class="mt-8 prose ">
           <%= raw @post.body %>

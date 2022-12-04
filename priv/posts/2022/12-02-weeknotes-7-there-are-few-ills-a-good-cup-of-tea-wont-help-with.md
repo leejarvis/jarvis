@@ -1,6 +1,6 @@
 %{
   title: "There are few ills a good cup of tea won’t help with",
-  summary: "Weeknotes 7",
+  summary: "Weeknotes 7"
 }
 ---
 

@@ -1,12 +1,31 @@
 defmodule Jarvis.Blog.Post do
-  @enforce_keys [:id, :title, :body, :year, :date]
-  defstruct [:id, :title, :body, :summary, :year, :date, :formatted_date]
+  @enforce_keys [:id, :title, :body, :year, :published_at]
+  defstruct [:id, :title, :body, :summary, :year, :published_at]
 
   def build(filename, attrs, body) do
-    [year, month_day_id] = filename |> Path.rootname() |> Path.split() |> Enum.take(-2)
-    [month, day, id] = String.split(month_day_id, "-", parts: 3)
-    date = Date.from_iso8601!("#{year}-#{month}-#{day}")
-    formatted_date = Calendar.strftime(date, "%B %d, %Y")
-    struct!(__MODULE__, [id: id, year: year, date: date, formatted_date: formatted_date, body: body] ++ Map.to_list(attrs))
+    attrs =
+      parse_dates_and_id(filename)
+      ++ [body: body]
+      ++ Map.to_list(attrs)
+
+    struct!(__MODULE__, attrs)
+  end
+
+  defp parse_dates_and_id(filename) do
+    [year, id] =
+      filename
+      |> Path.rootname()
+      |> Path.split()
+      |> Enum.take(-2)
+
+    [month, day, id] = String.split(id, "-", parts: 3)
+    published_at = parse_datetime("#{year}-#{month}-#{day} 09:00:00+00")
+
+    [published_at: published_at, year: year, id: id]
+  end
+
+  defp parse_datetime(datetime) do
+    {:ok, dt, 0} = DateTime.from_iso8601(datetime)
+    dt
   end
 end

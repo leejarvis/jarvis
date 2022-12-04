@@ -21,6 +21,7 @@ defmodule JarvisWeb.Router do
     get "/about", PageController, :about
     get "/uses", PageController, :uses
 
+    get "/feed.xml", PostController, :feed
     get "/posts", PostController, :index
     get "/posts/:year/:id", PostController, :show
   end

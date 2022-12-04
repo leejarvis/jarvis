@@ -20,4 +20,33 @@ defmodule JarvisWeb.PostController do
       |> render(:show, post: post)
     end
   end
+
+  def feed(conn, _params) do
+    conn
+    |> put_resp_content_type("text/xml")
+    |> send_resp(200, build_feed())
+  end
+
+  defp build_feed() do
+    alias Atomex.Feed
+
+    posts = Jarvis.Blog.posts()
+    last_update = Enum.map(posts, &(&1.published_at)) |> Enum.max()
+
+    Feed.new(url(~p"/"), last_update, "Lee Jarvis")
+    |> Feed.author("Lee Jarvis", email: "lee@jarvis.to")
+    |> Feed.link(url(~p"/feed.xml"), rel: "self")
+    |> Feed.entries(Enum.map(posts, &feed_entry/1))
+    |> Feed.build()
+    |> Atomex.generate_document()
+  end
+
+  defp feed_entry(post) do
+    alias Atomex.Entry
+
+    Entry.new(url(~p"/posts/#{post.year}/#{post.id}"), post.published_at, post.title)
+    |> Entry.author("Lee Jarvis", uri: url(~p"/"))
+    |> Entry.content({:cdata, post.body}, type: "html")
+    |> Entry.build()
+  end
 end

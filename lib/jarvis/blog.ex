@@ -6,7 +6,7 @@ defmodule Jarvis.Blog do
 
   defmodule NotFoundError, do: defexception [:message, plug_status: 404]
 
-  @posts Enum.sort_by(@posts, & &1.date, {:desc, Date})
+  @posts Enum.sort_by(@posts, & &1.published_at, {:desc, Date})
 
   def posts, do: @posts
   def recent_posts, do: Enum.take(posts(), 3)

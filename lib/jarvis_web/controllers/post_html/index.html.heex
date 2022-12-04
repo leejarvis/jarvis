@@ -1,9 +1,12 @@
 <div class="mx-auto max-w-2xl lg:max-w-5xl pt-10">
   <.header>
     Posts
-    <:subtitle>
-      Notes on software development, tech leadership, product design and all around shitposting.
-    </:subtitle>
+    <:actions>
+      <.link href={~p"/feed.xml"} class="inline-block rounded-2xl bg-slate-100 px-3 py-1 shadow-md hover:bg-slate-200">
+        <Heroicons.rss class="h-5 w-5 inline" />
+        <span class="font-semibold text-xs opacity-80">RSS</span>
+      </.link>
+    </:actions>
   </.header>
 
   <div class="mt-14">
@@ -23,11 +26,11 @@
               </h2>
               <time
                 class="md:hidden relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 pl-3.5"
-                datetime={post.date}>
+                datetime={post.published_at}>
                 <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
                   <span class="h-4 w-0.5 rounded-full bg-zinc-200 "></span>
                 </span>
-                <%= post.formatted_date %>
+                <%= format_date(post.published_at) %>
               </time>
               <%= if post.summary do %>
                 <p class="relative z-10 mt-2 text-sm text-zinc-600 ">
@@ -43,8 +46,8 @@
             </div>
             <time
               class="mt-1 hidden md:block relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 "
-              datetime={post.date}>
-              <%= post.formatted_date %>
+              datetime={post.published_at}>
+              <%= format_date(post.published_at) %>
             </time>
           </article>
         <% end %>
