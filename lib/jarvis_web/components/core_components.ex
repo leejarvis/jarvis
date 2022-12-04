@@ -542,6 +542,43 @@ defmodule JarvisWeb.CoreComponents do
     Calendar.strftime(date, "%B %d, %Y")
   end
 
+  @doc """
+  Renders a section with sub-items on the /uses page.
+  """
+  attr :heading, :string, required: true
+  attr :id, :string, required: true
+
+  slot :item, required: true do
+    attr :name, :string, required: true
+    attr :link, :string, required: false
+  end
+
+  def uses_section(assigns) do
+    ~H"""
+    <section>
+      <h3 id={@id} class="font-semibold text-zinc-800">
+        <.link href={"##{@id}"}><%= @heading %></.link>
+      </h3>
+
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 mt-4">
+        <%= for item <- @item do %>
+          <div class="relative flex space-x-3 rounded-lg border border-zinc-200 bg-white px-6 py-5 shadow-sm hover:border-zinc-300">
+            <div class="min-w-0 flex-1">
+              <p class="text-sm font-medium text-gray-900 mb-3">
+                <%= item[:name] %>
+                <.link :if={item[:link]} href={item[:link]} target="_blank" class="absolute top-4 right-4 opacity-80" title={"Visit #{item[:name]} website"}>
+                  <Heroicons.arrow_top_right_on_square class="h-4 w-4 inline" />
+                </.link>
+              </p>
+              <p class="text-sm leading-5 text-gray-500"><%= render_slot(item) %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </section>
+    """
+  end
+
   ## JS Commands
 
   def show(js \\ %JS{}, selector) do
