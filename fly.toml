@@ -1,12 +1,12 @@
-# fly.toml file generated for weathered-butterfly-6242 on 2022-12-02T19:52:34Z
+# fly.toml file generated for leejarvis on 2022-12-04T13:07:08Z
 
-app = "weathered-butterfly-6242"
+app = "leejarvis"
 kill_signal = "SIGTERM"
 kill_timeout = 5
 processes = []
 
 [env]
-  PHX_HOST = "weathered-butterfly-6242.fly.dev"
+  PHX_HOST = "leejarvis.fly.dev"
   PORT = "8080"
 
 [experimental]
