@@ -547,6 +547,7 @@ defmodule JarvisWeb.CoreComponents do
   """
   attr :href, :string, required: true
   attr :active, :boolean, default: false
+  slot :inner_block, required: true
 
   def nav_link(assigns) do
     ~H"""
