@@ -13,7 +13,7 @@ defmodule JarvisWeb.PostControllerTest do
     {:ok, doc} = Floki.parse_document(conn.resp_body)
 
     assert "Lee Jarvis" == Floki.find(doc, "feed > author > name") |> Floki.text()
-    assert "lee@jarvis.to" == Floki.find(doc, "feed > author > email") |> Floki.text()
+    assert "lee@jrvs.uk" == Floki.find(doc, "feed > author > email") |> Floki.text()
 
     [{"entry", [], entry} | _] = Floki.find(doc, "feed > entry")
     [post | _] = Jarvis.Blog.posts()

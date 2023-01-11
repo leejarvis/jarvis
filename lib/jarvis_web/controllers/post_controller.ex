@@ -34,7 +34,7 @@ defmodule JarvisWeb.PostController do
     last_update = Enum.map(posts, &(&1.published_at)) |> Enum.max()
 
     Feed.new(url(~p"/"), last_update, "Lee Jarvis")
-    |> Feed.author("Lee Jarvis", email: "lee@jarvis.to")
+    |> Feed.author("Lee Jarvis", email: "lee@jrvs.uk")
     |> Feed.link(url(~p"/feed.xml"), rel: "self")
     |> Feed.entries(Enum.map(posts, &feed_entry/1))
     |> Feed.build()
